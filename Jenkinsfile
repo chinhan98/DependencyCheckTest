@@ -6,7 +6,7 @@ pipeline {
             steps {
                 dependencyCheck additionalArguments: ''' 
                             --format XML --suppression supression.xml
-                            ''', odcInstallation: 'OWASP Dependency-Check Vulnerabilities'
+                            ''', odcInstallation: 'Default'
                 
                 dependencyCheckPublisher pattern: 'dependency-check-report.xml'
             }
